@@ -1,12 +1,11 @@
 /**
  * Format a number as a currency string.
- * 
- * @param amount - The amount to format
- * @param currency - Currency code (default: "USD")
- * @returns Formatted string like "$1,234.56"
+ * @param {number} amount - The amount to format
+ * @param {string} currency - Currency code (default: "USD")
+ * @returns {string} Formatted string like "$1,234.56"
  */
-export function formatCurrency(amount: number, currency: string = "USD"): string {
-  const symbols: Record<string, string> = {
+export function formatCurrency(amount, currency = "USD") {
+  const symbols = {
     USD: "$",
     EUR: "€",
     GBP: "£",
@@ -23,11 +22,10 @@ export function formatCurrency(amount: number, currency: string = "USD"): string
 
 /**
  * Parse a currency string back to a number.
- * 
- * @param str - String like "$1,234.56"
- * @returns The numeric value
+ * @param {string} str - String like "$1,234.56"
+ * @returns {number} The numeric value
  */
-export function parseCurrency(str: string): number {
+export function parseCurrency(str) {
   const cleaned = str.replace(/[^0-9.-]/g, "");
   return parseFloat(cleaned);
 }
