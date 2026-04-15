@@ -1,4 +1,4 @@
-import { formatCurrency, parseCurrency } from "../src/format.js";
+import { formatCurrency, parseCurrency } from "../src/format";
 
 function assert(condition, message) {
   if (!condition) {
