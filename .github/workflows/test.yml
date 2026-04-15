@@ -21,5 +21,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Install tsx
+        run: npm install --save-dev tsx
+
       - name: Run tests
-        run: node test/run.js
+        run: npx tsx test/run.js
